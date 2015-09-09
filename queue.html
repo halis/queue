@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript" src='queue.js'></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var fifo, lifo;
+
+		fifo = new Queue([1,2,3], true);
+		fifo.print();
+		console.log('Enqueued: ', fifo.enqueue(4));
+		fifo.print();
+		console.log('Next: ', fifo.next());
+		console.log('Dequeued:', fifo.dequeue());
+		fifo.print();
+		console.log('Next: ', fifo.next());
+		console.log('Size: ', fifo.size);
+		
+
+		console.log(' ');
+		lifo = new Queue([1,2,3], false);
+		lifo.print();
+		console.log('Enqueued: ', lifo.enqueue(4));
+		lifo.print();
+		console.log('Next: ', lifo.next());
+		console.log('Dequeued:', lifo.dequeue());
+		lifo.print();
+		console.log('Next: ', lifo.next());
+		console.log('Size: ', lifo.size);
+	</script>
+</body>
+</html>
